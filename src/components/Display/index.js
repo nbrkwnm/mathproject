@@ -1,12 +1,17 @@
 import React from 'react';
-import { Container, DisplayText } from './styles';
+import { Container, ValueContainer, DisplayText } from './styles';
 
 const Display = (props) => {
   return (
     <Container>
-      <DisplayText>
-        {props.value}
-      </DisplayText>
+      <ValueContainer>
+        <DisplayText>
+          =
+        </DisplayText>
+        <DisplayText>
+          {props.value}
+        </DisplayText>
+      </ValueContainer>
     </Container>
   );
 }

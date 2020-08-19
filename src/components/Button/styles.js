@@ -2,16 +2,16 @@ import styled from 'styled-components/native';
 
 import { Dimensions } from 'react-native';
 
-const height = Dimensions.get("window").width / 4;
+const height = ((Dimensions.get("window").width / 4) - 5 );
 
 export const ButtonSimple = styled.View`
   height: ${height}px;
   width: ${height}px;
   padding: 20px;
   background-color: #f0f0f0;
-  border-width: 1px;
-  border-color: #888;
   justify-content: center;
+  border-radius: ${height}px;
+  margin-bottom: 5px;
 `;
 
 export const ButtonDouble = styled(ButtonSimple)`
@@ -24,7 +24,7 @@ export const ButtonTriple = styled(ButtonSimple)`
 
 export const OperationButton = styled(ButtonSimple)`
   color: #FFF;
-  background-color: #FA8231;
+  background-color: #00FFB3;
 `;
 
 export const ButtonText = styled.Text`
